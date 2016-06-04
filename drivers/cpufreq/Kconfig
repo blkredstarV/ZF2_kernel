@@ -207,22 +207,6 @@ config CPU_FREQ_DEFAULT_GOV_HOTPLUG
 	  governor. If unsure have a look at the help section of the
 	  driver. Fallback governor will be the performance governor.
 
-<<<<<<< HEAD
-=======
-config CPU_FREQ_DEFAULT_GOV_IMPULSE
-	bool "impulse"
-	select CPU_FREQ_GOV_IMPULSE
-	help
-	  Use the CPUFreq governor 'impulse' as default. This allows
-	  you to get a full dynamic cpu frequency capable system by simply
-	  loading your cpufreq low-level hardware driver, using the
-	  'impulse' governor for latency-sensitive workloads.
-
-config CPU_FREQ_DEFAULT_GOV_CYAN
-	bool "cyan"
-	select CPU_FREQ_GOV_CYAN
-	help
-	cyan' - an interactive based optimized governor!
 
 config CPU_FREQ_DEFAULT_GOV_BLUACTIVE
 	bool "bluactive"
@@ -230,7 +214,6 @@ config CPU_FREQ_DEFAULT_GOV_BLUACTIVE
 	help
 	Use the CPUFreq governor 'bluactive' as default.
 
->>>>>>> 2f4d83c... Add Bluactive CPU Governor
 endchoice
 
 config CPU_FREQ_GOV_BIOSHOCK
