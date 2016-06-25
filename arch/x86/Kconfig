@@ -920,14 +920,14 @@ config SCHED_MC
 config ASMP
 	bool "Multi-core automatic hotplug support"
 	depends on SMP && HOTPLUG_CPU
-	default y
+	default n
 	help
 	  Automatically hotplugs the multiple cpu cores on and off
 	  based on cpu load and suspend state
 
 config ALUCARD_HOTPLUG
 	bool "Enable alucard-hotplug cpu hotplug driver"
-	default y
+	default n
 	help
 	  Alucard-hotplug cpu hotplug driver
 
