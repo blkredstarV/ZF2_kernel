@@ -21,14 +21,14 @@ fi
 
 # Find the directories to log
 echo"";echo"";echo""
-echo "FlareM Kernel -------------------------------------------------------------------------"
+echo "BlkStar Kernel -------------------------------------------------------------------------"
 echo""
 find $rdir -name .git | sed 's/\/.git//g' | sed 'N;$!P;$!D;$d' | while read line
 do
 cd $line
     # Test to see if the repo needs to have a changelog written.
     log=$(git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges --since=$sdate --date-order)
-    project="FlareM Kernel"
+    project="BlkStar"
     if [ -z "$log" ]; then
     echo " >>> Nothing updated on $project changelog, skipping ..."
     else

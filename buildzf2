@@ -22,7 +22,7 @@ export CPUS=`nproc`
 echo "Setting Version Number"
 export VER=v$1
 echo "Setting Extra Version"
-export EV=EXTRAVERSION=_FlareM_v$1
+export EV=EXTRAVERSION=_BlkStar_v$1
 if [ -z "$2" ]
   then
     NH="na"
@@ -46,10 +46,10 @@ echo "SElinux set to Permissive"
  fi
 else
 echo "Setting Defconfig"
-export DEFCONFIG=cyanogenmod_zenfone2_defconfig
+export DEFCONFIG=BlkStar_defconfig
 echo "SElinux set to Enforcing"
 fi
-echo "Setting bzImage Location For FlareM kernel By say99 Of XDA (thanks to eoghan2t7)"
+echo "Setting bzImage Location For BlkStar kernel By blkredstarV (thanks to eoghan2t7)"
 export BZIMAGE=arch/x86/boot/bzImage
 echo "Enabling Graphite Optimizations"
 export ENABLE_GRAPHITE=true
@@ -74,7 +74,7 @@ else
    make $DEFCONFIG
    sleep $SLEEP
 fi
-wmctrl -r :ACTIVE: -N "Compiling FlareM Kernel"
+wmctrl -r :ACTIVE: -N "Compiling BlkStar Kernel"
 make $EV -j$CPUS
 
 if [ -f $BZIMAGE ];
@@ -100,7 +100,7 @@ echo "Starting Build Process  : done"
 echo "Build complete"
 
 #Kernel Packing
-wmctrl -r :ACTIVE: -N "FlareM Kernel Packing"
+wmctrl -r :ACTIVE: -N "BlkStar Kernel Packing"
 echo "Starting Packing To Recovery Flashable Zip"
 cd out/
 echo "Removing Old Files"
@@ -109,8 +109,8 @@ sleep $SLEEP
 echo "Copying bzImage"
 mv ../arch/x86/boot/bzImage bzImage
 sleep $SLEEP
-echo "Compiling FlareM_"$VER".zip"
-find . -type f -exec zip FlareM_"$VER".zip {} +
+echo "Compiling BlkStar_"$VER".zip"
+find . -type f -exec zip BlkStar_"$VER".zip {} +
 nowf=$(date +"%T")
 cd ..
 make clean

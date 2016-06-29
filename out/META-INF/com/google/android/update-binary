@@ -31,16 +31,25 @@ mkdir -p /tmp/anykernel;
 cd /tmp/anykernel;
 unzip -o "$ZIP";
 
-ui_print "$(file_getprop /tmp/anykernel/anykernel.sh kernel.string)";
-ui_print "              ========================== ";
-ui_print "                 ________  ____    ____  ";
-ui_print "                /  _____/ /  _ \  / _  \ ";
-ui_print "                |  |___   | | \ \/ / | | ";
-ui_print "                |  ___/   | |  \__/  | | ";
-ui_print "                |  |      | |        | | ";
-ui_print "                |__|LARE  |_|        |_| ";
-ui_print "                           KERNEL FlareM ";
-ui_print "              ========================== ";
+ui_print(" ___  _    _  _ ____ ___ ____ ____ ");
+ui_print(" |__] |    |_/  [__   |  |__| |__/ ");
+ui_print(" |__] |___ | \_ ___]  |  |  | |  \ ");
+ui_print(" _  _ ____ ____ _  _ ____ _        ");
+ui_print(" |_/  |___ |__/ |\ | |___ |        ");
+ui_print(" | \_ |___ |  \ | \| |___ |___     ");  
+ui_print("                 ______      ");
+ui_print("              .-        -.   ");
+ui_print("             /            \  ");
+ui_print("            |              | ");
+ui_print("            |,  .-.  .-.  ,| ");
+ui_print("            | )(__/  \__)( | ");
+ui_print("            |/     /\     \| ");
+ui_print("       (@_  (_     ^^     _) ");
+ui_print("  _     ) \__\__|IIIIII|__/________________ ");
+ui_print(" (_)@8@8{}<___|-\IIIIII/-|_________________>");
+ui_print("        )_/   \          / ");
+ui_print("       (@      `--------`  "); 
+ui_print(" ~for the Zenfone2  ");
 
 /sbin/busybox mount /system;
 
@@ -66,7 +75,7 @@ if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.initd)" == 1 ]; then
   set_perm_recursive 0 0 0755 0755 /system/etc/init.d;
 fi;
 
-ui_print "Installing FlareM kernel...";
+ui_print "Installing BlkStar Kernel...";
 /sbin/sh /tmp/anykernel/anykernel.sh;
 if [ "$(cat /tmp/anykernel/exitcode)" == 1 ]; then 
   umount /system;
